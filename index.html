@@ -207,6 +207,53 @@ function sendMessage(){
     alert("Message Sent Successfully!");
 }
 </script>
+<div class="news-grid">
 
+    <div class="card">
+        <img src="https://picsum.photos/400/250?1">
+        <div class="card-content">
+            <h3>Breaking News 1</h3>
+            <p>Yahan aapki news ka short description aayega.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/250?2">
+        <div class="card-content">
+            <h3>Breaking News 2</h3>
+            <p>Yahan aapki news ka short description aayega.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/250?3">
+        <div class="card-content">
+            <h3>Breaking News 3</h3>
+            <p>Yahan aapki news ka short description aayega.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- 🎥 VIDEO UPLOAD SECTION (HERE ADDED) -->
+<div class="video-section">
+    <h2>🎥 Upload & Watch Video</h2>
+
+    <input type="file" accept="video/*" onchange="loadVideo(event)">
+
+    <video id="videoPlayer" controls style="display:none;"></video>
+</div>
+<!-- 🎥 END VIDEO SECTION -->
+    function sendMessage(){
+    alert("Message Sent Successfully!");
+}
+
+function loadVideo(event){
+    var video = document.getElementById('videoPlayer');
+    video.src = URL.createObjectURL(event.target.files[0]);
+    video.style.display = "block";
+    video.load();
+    video.play();
+}
 </body>
 </html>
